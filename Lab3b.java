@@ -8,8 +8,15 @@ public class Lab3b {
 
 	Scanner sc = new Scanner(System.in);
 
-	    System.out.print("Enter number of bottles of root beer on wall > ");
+	System.out.print("Enter number of bottles of root beer on wall > ");
+
+	if (sc.hasNextInt()) {
 		int bottles = sc.nextInt();
+		}
+	else {
+		System.out.println("You typed something other than an integer!");
+		String somethingElse = sc.next();
+		}	
 
 		if (bottles <= 0 || bottles > 99) {
 		    System.out.println("Number must be > 0 and < 100 !");
